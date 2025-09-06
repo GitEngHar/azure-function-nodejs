@@ -2,8 +2,8 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import {SearchClient, AzureKeyCredential, SearchIndexClient, KnownSearchFieldDataType} from "@azure/search-documents";
 
-const endpoint = "https://valid-ai-search.search.windows.net";
-const key = "deT6cmZGTrin5lIlsWDZPiPagisIf9gTI23UqyCeckAzSeBJPxSc";
+const endpoint = process.env.endpoint || "";
+const key = process.env.key || "";
 const indexName = process.env.INDEX_NAME || "quickidx";
 
 // SearchClient を初期化（シングルトンで再利用）
