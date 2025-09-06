@@ -6,6 +6,6 @@ app.http("hello", {
     methods: ["GET"],
     authLevel: "anonymous",
     handler: async (_req: HttpRequest): Promise<HttpResponseInit> => ({
-        body: "Hello World!!!!!"
+        body: "Hello World!!!!!!!!"
     })
 });
